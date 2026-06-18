@@ -1,11 +1,133 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro'
+import { SITE } from '../config'
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Norelis Monsalve — Product Manager">
+
+  <section class="hero">
+    <p class="label">Product Manager</p>
+    <h1>I build digital products that turn complexity into clarity.</h1>
+    <p class="bio">
+      Strategic PM with 5+ years leading product discovery, UX, and delivery 
+      across FinTech, EdTech, and SaaS. Focused on user-centric solutions 
+      with measurable impact.
+    </p>
+  </section>
+
+  <section class="work">
+    <p class="label">Selected work</p>
+
+    <a href="/work/onboarding" class="case-card">
+      <span class="tag">EdTech · User activation</span>
+      <h2>Reducing student onboarding time by 75% at Poliglota</h2>
+      <p>Redesigned the enrollment flow with segmented paths and automated assessments, cutting activation time from 20 days to 5.</p>
+      <div class="metrics">
+        <span><strong>−75%</strong> onboarding time</span>
+        <span><strong>20 → 5</strong> days</span>
+      </div>
+    </a>
+
+    <a href="/work/crm" class="case-card">
+      <span class="tag">EdTech · Internal operations</span>
+      <h2>CRM migration & sales process redesign at Poliglota</h2>
+      <p>Led the migration from an internal CRM to HubSpot, aligning 4 teams and 40+ users while preserving 7 years of commercial data.</p>
+      <div class="metrics">
+        <span><strong>40+</strong> users migrated</span>
+        <span><strong>&lt;1 week</strong> full adoption</span>
+      </div>
+    </a>
+  </section>
 </Layout>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .nav-name { font-size: 14px; font-weight: 500; }
+
+  .nav-link {
+    font-size: 13px;
+    color: #666;
+    transition: color 0.15s;
+  }
+  .nav-link:hover { color: #111; }
+
+  .hero { margin-bottom: 4rem; }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    max-width: 560px;
+  }
+
+  .bio {
+    font-size: 16px;
+    color: #666;
+    max-width: 520px;
+  }
+
+  .work { margin-bottom: 4rem; }
+  .work .label { margin-bottom: 1.25rem; }
+
+  .case-card {
+    display: block;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.15s;
+  }
+  .case-card:hover { border-color: #999; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    color: #999;
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-bottom: 0.75rem;
+  }
+
+  .case-card h2 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .case-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .metrics { display: flex; gap: 1.5rem; }
+  .metrics span { font-size: 13px; color: #999; }
+  .metrics strong { color: #111; font-weight: 500; }
+
+  footer {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  footer a { font-size: 14px; color: #666; transition: color 0.15s; }
+  footer a:hover { color: #111; }
+</style>
