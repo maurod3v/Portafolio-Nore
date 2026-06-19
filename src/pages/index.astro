@@ -1,27 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { SITE } from '../config'
+import Layout from "../layouts/Layout.astro";
+import { SITE } from "../config";
 ---
 
 <Layout title="Norelis Monsalve — Product Manager">
-
   <section class="hero">
     <p class="label">Product Manager</p>
     <h1>I build digital products that turn complexity into clarity.</h1>
     <p class="bio">
-      Strategic PM with 5+ years leading product discovery, UX, and delivery 
-      across FinTech, EdTech, and SaaS. Focused on user-centric solutions 
-      with measurable impact.
+      Strategic PM with 5+ years leading product discovery, UX, and delivery
+      across FinTech, EdTech, and SaaS. Focused on user-centric solutions with
+      measurable impact.
     </p>
   </section>
 
+  <section class="featured">
+    <p class="label">Featured project</p>
+    <a href="/work/patentia" class="featured-card">
+      <span class="tag">AI Product · Intellectual Property</span>
+      <h2>Building an AI-powered patent intelligence platform</h2>
+      <p>
+        Joined Patentia as PM at MVP stage to structure discovery, define the
+        roadmap, and identify the core adoption barrier holding back an AI
+        product in a trust-sensitive market.
+      </p>
+      <div class="metrics">
+        <span><strong>LLMs + n8n</strong> tech stack</span>
+        <span><strong>6 months</strong> as PM</span>
+      </div>
+      <span class="read-more">Read case study →</span>
+    </a>
+  </section>
+
   <section class="work">
-    <p class="label">Selected work</p>
+    <p class="label">Other projects</p>
 
     <a href="/work/onboarding" class="case-card">
       <span class="tag">EdTech · User activation</span>
       <h2>Reducing student onboarding time by 75% at Poliglota</h2>
-      <p>Redesigned the enrollment flow with segmented paths and automated assessments, cutting activation time from 20 days to 5.</p>
+      <p>
+        Redesigned the enrollment flow with segmented paths and automated
+        assessments, cutting activation time from 20 days to 5.
+      </p>
       <div class="metrics">
         <span><strong>−75%</strong> onboarding time</span>
         <span><strong>20 → 5</strong> days</span>
@@ -31,33 +51,66 @@ import { SITE } from '../config'
     <a href="/work/crm" class="case-card">
       <span class="tag">EdTech · Internal operations</span>
       <h2>CRM migration & sales process redesign at Poliglota</h2>
-      <p>Led the migration from an internal CRM to HubSpot, aligning 4 teams and 40+ users while preserving 7 years of commercial data.</p>
+      <p>
+        Led the migration from an internal CRM to HubSpot, aligning 4 teams and
+        40+ users while preserving 7 years of commercial data.
+      </p>
       <div class="metrics">
         <span><strong>40+</strong> users migrated</span>
         <span><strong>&lt;1 week</strong> full adoption</span>
       </div>
     </a>
   </section>
+
+  <section class="skills">
+    <p class="label">Skills & Tools</p>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Product Management</h3>
+        <p>
+          Product Discovery · Strategy · Roadmapping · Backlog Management ·
+          Prioritization · Agile Scrum · Stakeholder Management
+        </p>
+      </div>
+      <div class="skill-group">
+        <h3>User Experience</h3>
+        <p>User Research · Journey Mapping · Wireframing · Prototyping</p>
+      </div>
+      <div class="skill-group">
+        <h3>Operations & Process</h3>
+        <p>
+          Business Process Analysis · Workflow Optimization · Change Management
+          · Digital Transformation
+        </p>
+      </div>
+      <div class="skill-group">
+        <h3>AI Product</h3>
+        <p>
+          Prompt Engineering · AI Workflow Design · AI Adoption Strategy · LLMs
+          · n8n
+        </p>
+      </div>
+    </div>
+    <div class="tools">
+      <span class="tool">Jira</span>
+      <span class="tool">Figma</span>
+      <span class="tool">Notion</span>
+      <span class="tool">HubSpot</span>
+      <span class="tool">ClickUp</span>
+      <span class="tool">Hotjar</span>
+      <span class="tool">Google Analytics</span>
+      <span class="tool">Claude</span>
+      <span class="tool">ChatGPT</span>
+      <span class="tool">n8n</span>
+      <span class="tool">SharePoint</span>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .hero {
     margin-bottom: 4rem;
   }
-
-  .nav-name { font-size: 14px; font-weight: 500; }
-
-  .nav-link {
-    font-size: 13px;
-    color: #666;
-    transition: color 0.15s;
-  }
-  .nav-link:hover { color: #111; }
-
-  .hero { margin-bottom: 4rem; }
 
   .label {
     font-size: 11px;
@@ -81,8 +134,30 @@ import { SITE } from '../config'
     max-width: 520px;
   }
 
-  .work { margin-bottom: 4rem; }
-  .work .label { margin-bottom: 1.25rem; }
+  .featured {
+    margin-bottom: 3rem;
+  }
+  .featured .label {
+    margin-bottom: 1.25rem;
+  }
+
+  .featured-card {
+    display: block;
+    border: 1px solid #111;
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: background 0.15s;
+  }
+  .featured-card:hover {
+    background: #f9f9f9;
+  }
+
+  .work {
+    margin-bottom: 3rem;
+  }
+  .work .label {
+    margin-bottom: 1.25rem;
+  }
 
   .case-card {
     display: block;
@@ -92,7 +167,9 @@ import { SITE } from '../config'
     margin-bottom: 1rem;
     transition: border-color 0.15s;
   }
-  .case-card:hover { border-color: #999; }
+  .case-card:hover {
+    border-color: #999;
+  }
 
   .tag {
     display: inline-block;
@@ -104,6 +181,13 @@ import { SITE } from '../config'
     margin-bottom: 0.75rem;
   }
 
+  .featured-card h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
   .case-card h2 {
     font-size: 17px;
     font-weight: 500;
@@ -111,23 +195,85 @@ import { SITE } from '../config'
     margin-bottom: 0.5rem;
   }
 
+  .featured-card p,
   .case-card p {
     font-size: 14px;
     color: #666;
     margin-bottom: 1rem;
   }
 
-  .metrics { display: flex; gap: 1.5rem; }
-  .metrics span { font-size: 13px; color: #999; }
-  .metrics strong { color: #111; font-weight: 500; }
-
-  footer {
+  .metrics {
     display: flex;
     gap: 1.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e5e5e5;
+    margin-bottom: 1rem;
+  }
+  .metrics span {
+    font-size: 13px;
+    color: #999;
+  }
+  .metrics strong {
+    color: #111;
+    font-weight: 500;
   }
 
-  footer a { font-size: 14px; color: #666; transition: color 0.15s; }
-  footer a:hover { color: #111; }
+  .read-more {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+  }
+
+  .skills {
+    margin-bottom: 3rem;
+  }
+  .skills .label {
+    margin-bottom: 1.25rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-group {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .skill-group h3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-group p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tool {
+    font-size: 12px;
+    color: #666;
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 4px 10px;
+  }
+
+  @media (max-width: 520px) {
+    h1 {
+      font-size: 24px;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
