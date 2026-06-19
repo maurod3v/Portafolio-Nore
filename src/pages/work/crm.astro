@@ -1,63 +1,68 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro'
+import CaseStudy from "../../layouts/CaseStudy.astro";
 
 const metrics = [
-  { value: '40+', label: 'Users migrated' },
-  { value: '<1 week', label: 'Full adoption' },
-  { value: '7 years', label: 'Historical data preserved' },
-]
+  { value: "40+", label: "Users migrated" },
+  { value: "<1 week", label: "Full adoption" },
+  { value: "7 years", label: "Data preserved" },
+];
 ---
 
 <CaseStudy
-  title="CRM migration & sales process redesign at Poliglota"
+  title="CRM migration and sales process redesign — Poliglota"
   tag="EdTech · Internal operations"
   metrics={metrics}
 >
   <section>
     <h2>Context</h2>
-    <p>Poliglota had developed an internal CRM solution to manage its commercial pipeline and student information. Over time, maintaining a custom CRM was pulling engineering resources away from the company's core product — the learning experience itself.</p>
-    <p>As Product Manager, I led the migration of the internal CRM processes to HubSpot, ensuring data integrity, workflow optimization, and successful adoption across commercial and customer support teams.</p>
+    <p>
+      Poliglota had built its own internal CRM. Over time, maintaining it was
+      pulling engineering resources away from the core product — the learning
+      experience.
+    </p>
+    <p>
+      I led the migration to HubSpot, making sure data was preserved and all
+      teams could adopt the new system quickly.
+    </p>
   </section>
 
   <section>
     <h2>Problem</h2>
     <ul>
-      <li>The company was investing development resources in maintaining a non-core product</li>
-      <li>Commercial processes depended on a custom-built solution with scalability limitations</li>
-      <li>Customer information needed to remain consistent throughout the student lifecycle</li>
-      <li>Seven years of historical commercial data needed to be migrated without losing critical information</li>
+      <li>Engineering effort going into a non-core tool</li>
+      <li>Scalability limits in the internal CRM</li>
+      <li>7 years of commercial data that could not be lost</li>
+      <li>Different teams needed different parts of the customer journey</li>
     </ul>
-    <p>The core challenge: identify which capabilities should move to HubSpot and which processes should remain inside the Poliglota platform.</p>
   </section>
 
   <section>
     <h2>Discovery</h2>
-    <p>I mapped the current lead lifecycle, analyzed how commercial teams managed their workflows, and identified information requirements from Customer Service and post-sale teams. A key finding: different teams needed different parts of the customer journey.</p>
-    <div class="flow">
-      <div class="flow-item">
-        <span class="flow-label">Sales team</span>
-        <p>Lead management, qualification, and deal tracking</p>
-      </div>
-      <div class="flow-item">
-        <span class="flow-label">Customer success & coaches</span>
-        <p>Student information after conversion and during onboarding</p>
-      </div>
-    </div>
+    <p>
+      I mapped the full lead lifecycle and worked with the commercial team,
+      customer service, and data analytics to understand what each team needed.
+    </p>
+    <p>
+      Key finding: not everything should move to HubSpot. Some processes needed
+      to stay inside Poliglota's platform.
+    </p>
   </section>
 
   <section>
     <h2>Solution</h2>
-    <p>The migration strategy created a hybrid ecosystem — each platform handling what it does best.</p>
+    <p>I designed a two-system ecosystem.</p>
     <div class="flow">
       <div class="flow-item">
         <span class="flow-label">HubSpot</span>
         <h3>Commercial operations</h3>
-        <p>Lead capture from website forms, qualification, sales pipeline, and deal tracking. Lead data standardized with defined fields from the start.</p>
+        <p>
+          Lead capture, qualification, pipeline management, and deal tracking.
+        </p>
       </div>
       <div class="flow-item">
         <span class="flow-label">Poliglota platform</span>
         <h3>Student lifecycle</h3>
-        <p>Once a deal closed, relevant customer data transferred automatically into Poliglota for Customer Service and Coaches to manage the student experience.</p>
+        <p>Student onboarding, post-sale support, and coach coordination.</p>
       </div>
     </div>
   </section>
@@ -65,35 +70,32 @@ const metrics = [
   <section>
     <h2>My role</h2>
     <ul>
-      <li>Mapping the existing CRM workflow and identifying gaps</li>
-      <li>Defining business and user requirements across teams</li>
-      <li>Designing the future-state process and data architecture</li>
-      <li>Coordinating between Commercial, Customer Service, Data Analytics, and Product teams</li>
-      <li>Defining information fields and integration data flows</li>
-      <li>Leading data migration planning with the Analytics team</li>
-      <li>Supporting implementation, training, and adoption</li>
+      <li>Workflow Mapping</li>
+      <li>Stakeholder Management</li>
+      <li>Requirement Gathering</li>
+      <li>Data Migration Coordination</li>
+      <li>Future-State Process Design</li>
+      <li>Adoption Planning</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>Change management</h2>
-    <p>The migration involved transferring approximately seven years of commercial data. I coordinated with the Data Analytics team to ensure correct mapping and preservation of historical information.</p>
-    <p>For adoption, I organized platform demos and workflow walkthroughs for both teams. Approximately 20–25 sales team members and 15 Customer Service users transitioned to the new workflow in less than one week.</p>
   </section>
 
   <section>
     <h2>Results</h2>
     <ul>
-      <li>Successfully migrated commercial operations from an internal CRM to HubSpot</li>
-      <li>40+ users fully adopted the new workflow in less than one week</li>
-      <li>Eliminated ongoing investment in maintaining a non-core internal product</li>
-      <li>Improved lead management workflows and reduced manual coordination between teams</li>
-      <li>Improved data consistency across all stages of the customer journey</li>
+      <li>20–25 sales team members migrated to HubSpot</li>
+      <li>~15 customer service users migrated</li>
+      <li>Full adoption in less than one week</li>
+      <li>Less manual coordination between teams</li>
+      <li>Engineering resources freed from CRM maintenance</li>
     </ul>
   </section>
 
   <section>
     <h2>Key learning</h2>
-    <p>Effective product management sometimes means deciding what not to build. By integrating the right external solution and redesigning processes around it, we improved operational scalability while keeping the Poliglota product focused on what actually creates value for students.</p>
+    <p>
+      Good product decisions are sometimes about what not to build. Knowing when
+      to use an external tool instead of building internally is part of the
+      strategy.
+    </p>
   </section>
 </CaseStudy>

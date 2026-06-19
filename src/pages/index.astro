@@ -6,41 +6,65 @@ import { SITE } from "../config";
 <Layout title="Norelis Monsalve — Product Manager">
   <section class="hero">
     <p class="label">Product Manager</p>
-    <h1>I build digital products that turn complexity into clarity.</h1>
+    <h1>I turn complex processes into products that work.</h1>
     <p class="bio">
-      Strategic PM with 5+ years leading product discovery, UX, and delivery
-      across FinTech, EdTech, and SaaS. Focused on user-centric solutions with
-      measurable impact.
+      5+ years building digital products across SaaS, FinTech, EdTech, and AI. I
+      focus on the intersection of user needs, business goals, and operational
+      efficiency.
     </p>
   </section>
 
-  <section class="featured">
-    <p class="label">Featured project</p>
-    <a href="/work/patentia" class="featured-card">
-      <span class="tag">AI Product · Intellectual Property</span>
-      <h2>Building an AI-powered patent intelligence platform</h2>
-      <p>
-        Joined Patentia as PM at MVP stage to structure discovery, define the
-        roadmap, and identify the core adoption barrier holding back an AI
-        product in a trust-sensitive market.
-      </p>
-      <div class="metrics">
-        <span><strong>LLMs + n8n</strong> tech stack</span>
-        <span><strong>6 months</strong> as PM</span>
+  <section class="current-focus">
+    <p class="label">Current focus</p>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <span class="focus-tag">Master's Degree</span>
+        <h3>Business Process Management & Technologies</h3>
+        <p class="focus-meta">University of Granada · Spain · 2025–2026</p>
+        <p>
+          Studying technology management, digital transformation, business
+          process optimization, and data-driven decision making.
+        </p>
       </div>
-      <span class="read-more">Read case study →</span>
-    </a>
+      <div class="focus-item">
+        <span class="focus-tag">Internship</span>
+        <h3>Product & Operations</h3>
+        <p class="focus-meta">Sympathy for the Lawyer · Spain · 2026</p>
+        <p>
+          Supporting process optimization and AI implementation across legal,
+          tax, and business operations teams. Working on contract review
+          automation, internal workflow design, and platform support for
+          Incentiva.
+        </p>
+        <p class="focus-tools">
+          Claude · ChatGPT · Microsoft Copilot · Figma AI
+        </p>
+      </div>
+    </div>
   </section>
 
   <section class="work">
-    <p class="label">Other projects</p>
+    <p class="label">Case studies</p>
+
+    <a href="/work/patentia" class="case-card">
+      <span class="tag">AI Product · Intellectual Property</span>
+      <h2>AI Patentability Assessment Platform — Patentia</h2>
+      <p>
+        Joined an AI startup at MVP stage to structure product discovery, define
+        personas, and identify the core barrier slowing user adoption.
+      </p>
+      <div class="metrics">
+        <span><strong>MVP</strong> stage</span>
+        <span><strong>LLMs + n8n</strong></span>
+      </div>
+    </a>
 
     <a href="/work/onboarding" class="case-card">
       <span class="tag">EdTech · User activation</span>
-      <h2>Reducing student onboarding time by 75% at Poliglota</h2>
+      <h2>Reducing student onboarding time by 75% — Poliglota</h2>
       <p>
-        Redesigned the enrollment flow with segmented paths and automated
-        assessments, cutting activation time from 20 days to 5.
+        Redesigned the enrollment flow by segmenting students based on language
+        proficiency. Reduced onboarding from 20 days to 5.
       </p>
       <div class="metrics">
         <span><strong>−75%</strong> onboarding time</span>
@@ -50,14 +74,15 @@ import { SITE } from "../config";
 
     <a href="/work/crm" class="case-card">
       <span class="tag">EdTech · Internal operations</span>
-      <h2>CRM migration & sales process redesign at Poliglota</h2>
+      <h2>CRM migration and sales process redesign — Poliglota</h2>
       <p>
-        Led the migration from an internal CRM to HubSpot, aligning 4 teams and
-        40+ users while preserving 7 years of commercial data.
+        Led the migration from an internal CRM to HubSpot. Aligned 4 teams,
+        preserved 7 years of commercial data, and achieved full adoption in less
+        than one week.
       </p>
       <div class="metrics">
         <span><strong>40+</strong> users migrated</span>
-        <span><strong>&lt;1 week</strong> full adoption</span>
+        <span><strong>&lt;1 week</strong> adoption</span>
       </div>
     </a>
   </section>
@@ -101,6 +126,7 @@ import { SITE } from "../config";
       <span class="tool">Google Analytics</span>
       <span class="tool">Claude</span>
       <span class="tool">ChatGPT</span>
+      <span class="tool">Microsoft Copilot</span>
       <span class="tool">n8n</span>
       <span class="tool">SharePoint</span>
     </div>
@@ -134,26 +160,61 @@ import { SITE } from "../config";
     max-width: 520px;
   }
 
-  .featured {
-    margin-bottom: 3rem;
+  .current-focus {
+    margin-bottom: 4rem;
   }
-  .featured .label {
+  .current-focus .label {
     margin-bottom: 1.25rem;
   }
 
-  .featured-card {
-    display: block;
-    border: 1px solid #111;
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: background 0.15s;
+  .focus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
-  .featured-card:hover {
-    background: #f9f9f9;
+
+  .focus-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .focus-tag {
+    display: inline-block;
+    font-size: 11px;
+    color: #999;
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-bottom: 0.75rem;
+  }
+
+  .focus-item h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .focus-meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 0.75rem;
+  }
+
+  .focus-item p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.65;
+  }
+
+  .focus-tools {
+    font-size: 12px;
+    color: #999;
+    margin-top: 0.75rem;
   }
 
   .work {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .work .label {
     margin-bottom: 1.25rem;
@@ -181,13 +242,6 @@ import { SITE } from "../config";
     margin-bottom: 0.75rem;
   }
 
-  .featured-card h2 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-  }
-
   .case-card h2 {
     font-size: 17px;
     font-weight: 500;
@@ -195,7 +249,6 @@ import { SITE } from "../config";
     margin-bottom: 0.5rem;
   }
 
-  .featured-card p,
   .case-card p {
     font-size: 14px;
     color: #666;
@@ -205,7 +258,6 @@ import { SITE } from "../config";
   .metrics {
     display: flex;
     gap: 1.5rem;
-    margin-bottom: 1rem;
   }
   .metrics span {
     font-size: 13px;
@@ -214,12 +266,6 @@ import { SITE } from "../config";
   .metrics strong {
     color: #111;
     font-weight: 500;
-  }
-
-  .read-more {
-    font-size: 13px;
-    font-weight: 500;
-    color: #111;
   }
 
   .skills {
@@ -273,6 +319,9 @@ import { SITE } from "../config";
       font-size: 24px;
     }
     .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .focus-grid {
       grid-template-columns: 1fr;
     }
   }

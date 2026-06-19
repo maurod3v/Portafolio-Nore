@@ -1,51 +1,72 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro'
+import CaseStudy from "../../layouts/CaseStudy.astro";
 
 const metrics = [
-  { value: '−75%', label: 'Onboarding time' },
-  { value: '20 → 5', label: 'Days to activation' },
-]
+  { value: "−75%", label: "Onboarding time" },
+  { value: "20 → 5", label: "Days to activation" },
+];
 ---
 
 <CaseStudy
-  title="Reducing student onboarding time by 75% at Poliglota"
+  title="Reducing student onboarding time by 75% — Poliglota"
   tag="EdTech · User activation"
   metrics={metrics}
 >
   <section>
     <h2>Context</h2>
-    <p>Poliglota is an EdTech platform that helps students learn languages through online programs. One of the biggest operational challenges was the student onboarding process, which took approximately 20 days from enrollment to course assignment.</p>
-    <p>The process relied heavily on manual coordination between students, language coaches, and internal teams — creating delays and increasing the risk of user abandonment before experiencing the product.</p>
+    <p>
+      Poliglota is an online language learning platform. The student onboarding
+      process took around 20 days and required a lot of manual coordination
+      between students, coaches, and internal teams. Many students abandoned the
+      process before experiencing the product.
+    </p>
   </section>
 
   <section>
     <h2>Problem</h2>
     <ul>
-      <li>Excessive enrollment time (approximately 20 days)</li>
-      <li>High operational workload for language coaches</li>
-      <li>Risk of losing students before activation due to process friction</li>
+      <li>Too long to activate — 20 days from enrollment to first class</li>
+      <li>Too much manual work for coaches</li>
+      <li>Students dropping off before their first class</li>
     </ul>
-    <p>A key discovery: many students with beginner-level proficiency were following the same manual evaluation path as advanced learners, despite not requiring the same level of assessment.</p>
+    <p>
+      A key finding: all students followed the same onboarding path, regardless
+      of their language level.
+    </p>
   </section>
 
   <section>
     <h2>Discovery</h2>
-    <p>To understand the root causes, I conducted stakeholder interviews with internal teams, analyzed the existing onboarding workflow, mapped the user journey to identify friction points, and ran requirement-gathering sessions with business stakeholders.</p>
+    <ul>
+      <li>Stakeholder interviews with internal teams</li>
+      <li>User journey mapping</li>
+      <li>Workflow analysis</li>
+      <li>Requirement sessions with business stakeholders</li>
+    </ul>
   </section>
 
   <section>
     <h2>Solution</h2>
-    <p>We redesigned the onboarding flow by introducing a segmented experience based on language proficiency — automating low-complexity cases while preserving personalized support for students who required deeper assessment.</p>
+    <p>
+      I redesigned the onboarding flow with two paths based on language
+      proficiency.
+    </p>
     <div class="flow">
       <div class="flow-item">
-        <span class="flow-label">Path 1</span>
-        <h3>Automated assessment</h3>
-        <p>Students with beginner-level proficiency (A1) completed an automated language evaluation through an integrated VideoAsk experience. Based on their responses, they were automatically classified and could proceed directly to course selection.</p>
+        <span class="flow-label">Automated path</span>
+        <h3>Beginner students (A1)</h3>
+        <p>
+          Completed an automated assessment through VideoAsk and went directly
+          to course selection — no coach needed.
+        </p>
       </div>
       <div class="flow-item">
-        <span class="flow-label">Path 2</span>
-        <h3>Coach-assisted assessment</h3>
-        <p>Students requiring deeper evaluation were routed to a language coach. A scheduling integration connected to coaches' Google Calendars enabled students to book assessments directly, eliminating manual coordination.</p>
+        <span class="flow-label">Coach-assisted path</span>
+        <h3>Advanced students</h3>
+        <p>
+          Connected to a coach through a scheduling integration linked to Google
+          Calendar, removing manual coordination.
+        </p>
       </div>
     </div>
   </section>
@@ -53,29 +74,23 @@ const metrics = [
   <section>
     <h2>My role</h2>
     <ul>
-      <li>Gathering and defining business and user requirements</li>
-      <li>Leading discovery activities and stakeholder alignment</li>
-      <li>Mapping user journeys and identifying process bottlenecks</li>
-      <li>Designing low-fidelity and high-fidelity wireframes</li>
-      <li>Collaborating with UX and Engineering on implementation</li>
-      <li>Prioritizing the initiative within the product roadmap</li>
-      <li>Coordinating delivery and release to production</li>
+      <li>Product Discovery</li>
+      <li>Requirement Definition</li>
+      <li>User Journey Mapping</li>
+      <li>Low and High Fidelity Wireframes</li>
+      <li>Stakeholder Alignment</li>
+      <li>Prioritization</li>
+      <li>Delivery Coordination</li>
     </ul>
   </section>
 
   <section>
     <h2>Results</h2>
     <ul>
-      <li>Reduced onboarding time by 75% — from approximately 20 days to 5</li>
-      <li>Significantly reduced operational workload for language coaches</li>
-      <li>Increased process scalability by automating repetitive assessment tasks</li>
-      <li>Created a more self-service experience for students</li>
-      <li>Faster activation of new users with less friction at the critical first-touch moment</li>
+      <li>Onboarding time reduced from 20 days to 5</li>
+      <li>Less operational workload for coaches</li>
+      <li>More scalable process</li>
+      <li>More self-service experience for students</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>Key learning</h2>
-    <p>By segmenting users based on their actual needs rather than applying the same process to everyone, we improved both user experience and operational efficiency simultaneously. Not all users need the same path — identifying that distinction was the key insight that unlocked the solution.</p>
   </section>
 </CaseStudy>
